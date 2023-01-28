@@ -18,10 +18,13 @@ def compos(request):
 
 def result(request):
     d=request.POST['q1']
+    
+    '''
     imp=[(float(request.POST['c1'])*float(request.POST['c2'])*float(request.POST['c3']))**(1/4),
     ((1/float(request.POST['c1']))*float(request.POST['c4'])*float(request.POST['c5']))**(1/4),
     ((1/float(request.POST['c2']))*(1/float(request.POST['c4']))*float(request.POST['c6']))**(1/4),
     ((1/float(request.POST['c3']))*(1/float(request.POST['c5']))*(1/float(request.POST['c6'])))**(1/4)]
+
     
     impos=[imp[i]/sum(imp)for i in range(4)]
 
@@ -36,5 +39,20 @@ def result(request):
             res=g.name
             link=g.Link
             image=g.image
+    '''
+    impos=[int(request.POST['c1']),int(request.POST['c2']),int(request.POST['c3']),int(request.POST['c4']),int(request.POST['c5']),int(request.POST['c6'])]
+    gs=Geinin.objects.filter(neta=d)
+    max=0
+    res='誰か'
+    for g in gs:
+        com=[g.importance1,g.importance2,g.importance3,g.importance4,g.importance5,g.importance6]
+        a=sum([x*y for (x,y) in zip(com,com)])**(1/2)
+        b=sum([x*y for (x,y) in zip(impos,impos)])**(1/2)
+        score=sum([x*y for (x,y) in zip(com,impos)])/(a*b)
+        if(score>max):
+            max=score
+            res=g.name
+            link=g.Link
+            image=g.image
 
-    return render(request,"Result.html",{'name':res,'link':link,'image':image,'impos':impos,'type':d})
+    return render(request,"Result.html",{'name':res,'link':link,'image':image,'impos':impos,'type':d,'score':max})
