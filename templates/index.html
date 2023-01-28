@@ -1,0 +1,63 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'stylesheet/index.css' %}">
+<html>
+    <head>
+    <title>template test</title>
+    <style>
+        .center{
+          width:700px;
+          margin:0 auto;
+          text-align:center;
+        }
+        h1{
+            text-shadow: 4px 4px 8px #5c5c5c;
+            padding-top: 0%;
+        }
+        p{
+          text-align:center;
+        }
+        .main{
+            width: 542px;
+            margin:0 auto;
+        }
+    
+    </style>
+    </head>
+    <body>
+    <br><br><br><br><br>
+    <p><font face="Impact" size=3>今日から君もお笑いファン！</font>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　</p>
+    <h1 class="center"><font face="Impact" color="green">あなたのツボにハマるお笑い芸人を教えます！</font></h1>
+    <br><br>
+
+    <p>知りたい芸人のタイプをひとつ選んでください</p>
+    
+    
+    <form action="{% url 'mondaiapp:compos' %}" method="post">
+        {% csrf_token %}
+        <div class="main">
+        <div class="radio02">
+            
+            <input id="manzai" type="radio" name="q1" value="漫才" required> 
+            <label for="manzai">漫才</label>
+            
+            <input id="konto" type="radio" name="q1" value="コント"> 
+            <label for="konto">コント</label>
+            
+            <input id="pin" type="radio" name="q1" value="ピン">
+            <label for="pin">ピン芸人</label>
+            
+        </div>
+        
+            <p>
+            <input class="button" type="submit" value="検索する">
+            
+            </p>
+        </div>
+        
+    </form>
+    <p>製作：筑波大学3年　堤、澤口、田之口、網野</p>
+    <p ><img src="{% static "images/mond.jpg" %}" alt="表示できません"><img src="{% static "images/mond2.jpg" %}" alt="表示できません"></p>
+    <p><a href="https://www.minnade-inparusu.com/2021/03/26/comedian-generation-summary/">画像引用元①</a>　　　　　　　　　※写真にいる芸人が出てくるとは限りません　　　　　　　　　　<a href="https://www.kidzania.jp/tokyo/news/post_1252">画像引用元②</a></p>
+    </body>
+</html>

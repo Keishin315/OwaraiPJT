@@ -1,0 +1,29 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'stylesheet/result.css' %}">
+<html>
+    <head>
+    <title>template test</title>
+    <style>
+        h1{
+            text-shadow: 4px 4px 8px #5c5c5c;
+        }
+    </style>
+    </head>
+    <body>
+    <div main>
+    <h1><font face="Impact" >そんなあなたにぴったりの{{type}}芸人は....!</font></h1><br>
+    
+    <div class="fadeDown"style="background-color:#fafafa;;width:1200px;padding:30px;margin:auto;border-radius : 1%;box-shadow    : 8px 8px 6px #666666;">
+    <p ><font size=5 style="text-shadow    : 3px 3px 6px #666666;">★★★　<font face="Impact">{{name}}</font>　★★★</font></p>
+    <p><img src={{image}} alt="表示できません">
+    
+    <iframe width="560" height="315" src={{link}} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </p>
+    </div>
+    <br>
+    <a href={{image}}>画像引用元</a>
+    　　　　　
+    <a href="{% url 'mondaiapp:index' %}">Homeに戻る</a>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+
+body {
+    background: rgb(248, 252, 241);
+}
+
+.radio02{
+	
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+.radio02 input{
+	display: none;
+}
+
+.radio02 label{
+	display: block;
+	float:left;
+	cursor: pointer;
+	width: 180px;
+	margin: 0 auto;
+	padding: 1.4% 0 1.5% 0;
+	border-right: 1px solid #d7d7d7;
+	background: #e5e5e5;
+	color: #555e64;
+	font-size: 14px;
+	text-align: center;
+	line-height: 1;
+	transition: .2s;
+}
+
+.radio02 label:last-of-type{
+	border-right: 1px;
+}
+.radio02 input[type="radio"]:checked + label {
+	background-color: #a1b91d;
+	color: #fff;
+}
+
+
+.button {
+	display       : inline-block;
+	border-radius : 5%;          /* 角丸       */
+	font-size     : 22pt;        /* 文字サイズ */
+	text-align    : center;      /* 文字位置   */
+	cursor        : pointer;     /* カーソル   */
+	padding       : 25px 80px;   /* 余白       */
+	background    : #020216;     /* 背景色     */
+	color         : #ffffff;     /* 文字色     */
+	line-height   : 1em;         /* 1行の高さ  */
+	transition    : .3s;         /* なめらか変化 */
+	box-shadow    : 6px 6px 3px #666666;  /* 影の設定 */
+  }
+  .button:hover {
+	box-shadow    : none;        /* カーソル時の影消去 */
+  }
