@@ -7,6 +7,9 @@ body{
 p{
     font-size:large;
 }
+.board{
+	display: inline-block
+}
 .c1{
 	font-weight: 1000;
 }
