@@ -1,1 +1,1 @@
-SECRET_KEY = 'ここに'
+SECRET_KEY = ''
