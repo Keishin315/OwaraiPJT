@@ -66,10 +66,22 @@
         </p>
         -->
 
-        <div class="board" style="background-color:#cdcccc;;width:800px;padding:20px;margin:auto;border-radius : 1%;box-shadow    : 8px 8px 6px #666666;">
+        <div class="box">
+            <div style="background-color:#f2f2f2;;width:430px;padding:32px;margin:auto;border-radius : 5%;box-shadow    : 8px 8px 6px #666666;">
+            <br><p>項目の説明</p><br>
+            <p><font size=3>人気度：　　世間からの評価の度合い　　　　　　　　　</font></p>
+            <p><font size=3>ツッコミの怒り度：　　ツッコミがどの程度怒っているか</font></p>
+            <p><font size=3>発言のおかしさ：　　発言がどの程度意味不明か。　　　<br><font size=2>　　　　　　(例、普通->偏見->ボケ->意味不明)</font></font></p>
+            <p><font size=3>見た目の個性：　　見た目のインパクトがどの程度強いか</font></p>
+            <p><font size=3>テンポ感：　　漫才全体の会話のテンポ　　　　　　　　</font></p>
+            <p><font size=3>雰囲気：　何か面白い、形容し難い面白さ　　　　　　　</font></p>
+            </div>
+            <div class="board" style="background-color:#cdcccc;;width:800px;padding:20px;margin:auto;border-radius : 5%;box-shadow    : 8px 8px 6px #666666;">
             <p style="text-shadow: 4px 4px 8px #5c5c5c;font-weight:800"><font face="Impact"size=5>各項目についてどの程度求めますか？</font></p><br>
             <p><font size=1>　　　　　　　　　　　　　　　　いらない　 　　　　  あってもいい　　　　 　　欲しい　　　　　　　    非常に欲しい　　　　　    絶対に欲しい　</font></p>
-            <p>万人受け　　　　　
+            
+            <div class="comps">
+            <p>人気度　　　　　　
                 <input type="radio" name="c1" value=1 required>　　　　　
                 <input type="radio" name="c1" value=3>　　　　　
                 <input type="radio" name="c1" value=5>　　　　　
@@ -77,21 +89,21 @@
                 <input type="radio" name="c1" value=9>　　
             </p>
     
-            <p>センス　　　　　　
+            <p>ツッコミの怒り度　
                 <input type="radio" name="c2" value=1 required>　　　　　
                 <input type="radio" name="c2" value=3>　　　　　
                 <input type="radio" name="c2" value=5>　　　　　
                 <input type="radio" name="c2" value=7>　　　　　
                 <input type="radio" name="c2" value=9>　　
             </p>
-            <p>偏見　　　　　　　
+            <p>発言のおかしさ　　
                 <input type="radio" name="c3" value=1 required>　　　　　
                 <input type="radio" name="c3" value=3>　　　　　
                 <input type="radio" name="c3" value=5>　　　　　
                 <input type="radio" name="c3" value=7>　　　　　
                 <input type="radio" name="c3" value=9>　　
             </p>
-            <p>クレイジーさ　　　
+            <p>見た目の個性　　　
                 <input type="radio" name="c4" value=1 required>　　　　　
                 <input type="radio" name="c4" value=3>　　　　　
                 <input type="radio" name="c4" value=5>　　　　　
@@ -113,13 +125,16 @@
                 <input type="radio" name="c6" value=9>　　
             </p>
             </div>
+            </div>
+            </div>
             <p>
                 <input class="button" type="submit" value="決　　定">
             </p>
+            
         </form>
         <p></p>
         <a href="{% url 'mondaiapp:index' %}">Homeに戻る</a>
-        </div>
+        
     
         </body>
     </html>

@@ -54,5 +54,6 @@ def result(request):
             res=g.name
             link=g.Link
             image=g.image
+            des=g.description
 
-    return render(request,"Result.html",{'name':res,'link':link,'image':image,'impos':impos,'type':d,'score':max})
+    return render(request,"Result.html",{'name':res,'link':link,'image':image,'impos':impos,'type':d,'score':max,'des':des})

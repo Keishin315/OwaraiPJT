@@ -7,6 +7,10 @@ body{
 p{
     font-size:large;
 }
+.box{
+	margin: auto; 
+	display:flex;
+}
 .board{
 	display: inline-block
 }
