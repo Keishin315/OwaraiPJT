@@ -4,9 +4,9 @@
 <html>
     <head>
     </head>
+
     <body>
-    <div class="main">
-    <h1><font face="Impact">あなたの好みのタイプにカスタマイズします</font></h1>
+    <h1 style="text-shadow: 4px 4px 8px #5c5c5c;font-weight:800"><font face="Impact">あなたの好みのタイプにカスタマイズします</font></h1>
     <p>あなたの好みに類似した特徴ベクトルを持った芸人を探索します</p>
     <form action="{% url 'mondaiapp:result' %}" method="post">
         {% csrf_token %}
@@ -68,7 +68,7 @@
         -->
 
         <div class="box">
-            <div style="background-color:#f2f2f2;;width:450px;padding:32px;margin:auto;border-radius : 5%;box-shadow    : 8px 8px 6px #666666;">
+            <div class="descrip">
             <br><p>項目の説明</p><br>
             <p><font size=3>設定：　場面、キャラ設定が日常から離れている度合い。</font></p>
             <p><font size=3>展開：　ストーリーの巧みさ。急展開、伏線回収など。　</font></p>
@@ -77,7 +77,7 @@
             <p><font size=3>ボケ数：　ボケキャラのボケの多さ　　　　　　　　　　</font></p>
             <p><font size=3>人気度：　コント芸人の世間からの人気度　　　　　　　</font></p>
             </div>
-            <div class="board" style="background-color:#cdcccc;;width:800px;padding:20px;margin:auto;border-radius : 5%;box-shadow    : 8px 8px 6px #666666;">
+            <div class="board">
             <p style="text-shadow: 4px 4px 8px #5c5c5c;font-weight:800"><font face="Impact"size=5>各項目についてどの程度求めますか？</font></p><br>
             <p><font size=1>　　　　　　　　　　　　　　　　いらない　 　　　　  あってもいい　　　　 　　欲しい　　　　　　　    非常に欲しい　　　　　    絶対に欲しい　</font></p>
             

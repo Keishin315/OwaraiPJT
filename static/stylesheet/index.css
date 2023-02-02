@@ -3,6 +3,23 @@ body {
     background: rgb(248, 252, 241);
 }
 
+.center{
+	width:700px;
+	margin:0 auto;
+	text-align:center;
+}
+h1{
+	text-shadow: 4px 4px 8px #5c5c5c;
+	padding-top: 0%;
+}
+p{
+	text-align:center;
+}
+.main{
+	width: 542px;
+	margin:0 auto;
+}
+
 .radio02{
 	
 	width: 600px;

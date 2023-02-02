@@ -47,19 +47,9 @@ def result(request):
 
     cs=["人気度","ツッコミの怒り度","発言のおかしさ","見た目の個性","テンポ感","雰囲気"]
     if d=="コント":
-        cs[0]="設定　"
-        cs[1]="展開　　　　　　"
-        cs[2]="共感性　　　　"
-        cs[3]="シュールさ　"
-        cs[4]="ボケ量　"
-        cs[5]="人気度"
+        cs=["設定　","展開　　　　　　","共感性　　　　","シュールさ　","ボケ量　","人気度"]
     elif d=="ピン":
-        cs[0]="人気度"
-        cs[1]="モノマネ力　　　"
-        cs[2]="発言のおかしさ"
-        cs[3]="クレイジーさ"
-        cs[4]="複雑さ　"
-        cs[5]="声量　"
+        cs=["人気度","モノマネ力　　　","発言のおかしさ","クレイジーさ","複雑さ　","声量　"]
 
     for g in gs:
         com=[g.importance1,g.importance2,g.importance3,g.importance4,g.importance5,g.importance6]
@@ -76,7 +66,8 @@ def result(request):
              "image":g.image,
              "des":g.description,
              "type":d,
-             "impos":impos,"c1":cs[0],"c2":cs[1],"c3":cs[2],"c4":cs[3],"c5":cs[4],"c6":cs[5],
+             "impos":impos,
+             "c1":cs[0],"c2":cs[1],"c3":cs[2],"c4":cs[3],"c5":cs[4],"c6":cs[5],
             }
 
         if d=="ピン":

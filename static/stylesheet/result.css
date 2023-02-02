@@ -5,16 +5,19 @@ body{
     margin-top:3%;
     text-align: center;
 }
-.main{
-    
-    background:red;
-}
+
 
 .fadeDown{
     animation-name:fadeDownAnime;
     animation-duration:10s;
     animation-fill-mode:forwards;
     opacity:0;
+    background-color:#fafafa;
+    width:1200px;
+    padding:30px;
+    margin:auto;
+    border-radius : 1%;
+    box-shadow    : 8px 8px 6px #666666;
     }
     
     @keyframes fadeDownAnime{
@@ -28,3 +31,28 @@ body{
       transform: translateY(0);
       }
     }
+
+.comps{
+      width:800px;
+      padding:10px;
+	    margin:auto;
+	    border-radius : 5%;
+      background-color:#f3802e;
+	    box-shadow    : 8px 8px 6px #666666;
+      }
+.button {
+      display       : inline-block;
+      border-radius : 5%;          /* 角丸       */
+      font-size     : 22pt;        /* 文字サイズ */
+      text-align    : center;      /* 文字位置   */
+      cursor        : pointer;     /* カーソル   */
+      padding       : 25px 80px;   /* 余白       */
+      background    : #020216;     /* 背景色     */
+      color         : #ffffff;     /* 文字色     */
+      line-height   : 1em;         /* 1行の高さ  */
+      transition    : .3s;         /* なめらか変化 */
+      box-shadow    : 6px 6px 3px #666666;  /* 影の設定 */
+      }
+.button:hover {
+      box-shadow    : none;        /* カーソル時の影消去 */
+      }
