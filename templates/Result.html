@@ -21,10 +21,67 @@
     <iframe width="560" height="315" src={{link}} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </p>
     </div>
-    <br>
+    <br><br>
     <a href={{image}}>画像引用元</a>
-    <p>cos類似度:{{score}}</p>
+    <a>　　　　　cos類似度:{{score}}　　</a><br><br>
     <a href="{% url 'mondaiapp:index' %}">Homeに戻る</a>
     </div>
+
+    <form action="https://script.google.com/macros/s/AKfycbzg445ftvut7hgWM0zfDGqD98zReCfVDtZS8mkVUsUK5BTNGl_vAdYM3Wzm-BQQo3WVrA/exec" method="post">
+        
+        <div class="comps">
+            <br><br>
+            <p><input type="text" name="name" value={{name}} >の<input type="text" name="neta" value={{type}} >を見たあなたの評価を教えてください</p><br>
+            <p>{{c1}}　　　　　　
+                <input type="radio" name="v1" value='1' required>超低い　　
+                <input type="radio" name="v1" value='3'>低い　　　
+                <input type="radio" name="v1" value='5'>ある　　　
+                <input type="radio" name="v1" value='7'>結構ある　
+                <input type="radio" name="v1" value='9'>とてもある
+            </p>
+        
+            <p>{{c2}}　
+                <input type="radio" name="v2" value='1' required>超低い　　
+                <input type="radio" name="v2" value='3'>低い　　　
+                <input type="radio" name="v2" value='5'>ある　　　
+                <input type="radio" name="v2" value='7'>結構ある　
+                <input type="radio" name="v2" value='9'>とてもある
+            </p>
+            <p>{{c3}}　　
+                <input type="radio" name="v3" value='1' required>超低い　　
+                <input type="radio" name="v3" value='3'>低い　　　
+                <input type="radio" name="v3" value='5'>ある　　　
+                <input type="radio" name="v3" value='7'>結構ある　
+                <input type="radio" name="v3" value='9'>とてもある
+            </p>
+            <p>{{c4}}　　　
+                <input type="radio" name="v4" value='1' required>超低い　　
+                <input type="radio" name="v4" value='3'>低い　　　
+                <input type="radio" name="v4" value='5'>ある　　　
+                <input type="radio" name="v4" value='7'>結構ある　
+                <input type="radio" name="v4" value='9'>とてもある
+            </p>
+            <p>{{c5}}　　　　　
+                <input type="radio" name="v5" value='1' required>超低い　　
+                <input type="radio" name="v5" value='3'>低い　　　
+                <input type="radio" name="v5" value='5'>ある　　　
+                <input type="radio" name="v5" value='7'>結構ある　
+                <input type="radio" name="v5" value='9'>とてもある
+            </p>
+            <p>{{c6}}　　　　　　
+                <input type="radio" name="v6" value='1' required>超低い　　
+                <input type="radio" name="v6" value='3'>低い　　　
+                <input type="radio" name="v6" value='5'>ある　　　
+                <input type="radio" name="v6" value='7'>結構ある　
+                <input type="radio" name="v6" value='9'>とてもある
+            </p>
+            </div>
+        
+        <p>
+            <input class="button" type="submit" value="送　信">
+        </p>
+        
+    </form>
+    <p></p>
     </body>
 </html>
