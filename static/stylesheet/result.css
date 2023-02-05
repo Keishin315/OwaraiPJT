@@ -56,3 +56,16 @@ body{
 .button:hover {
       box-shadow    : none;        /* カーソル時の影消去 */
       }
+
+@media screen and (max-width:1200px) {
+	
+  .comps{
+    width:1000px;
+    padding:10px;
+    margin:auto;
+    border-radius : 5%;
+    background-color:#f3802e;
+    box-shadow    : 8px 8px 6px #666666;
+    }
+       
+ }
